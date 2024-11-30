@@ -288,10 +288,10 @@ $(document).ready(function () {
           $("#main").html("<p>No products found for this search or category.</p>");
         }
       } else {
-        console.error("API hatası:", response.status);
+        console.error("API error:", response.status);
       }
     } catch (error) {
-      console.error("Ağ hatası:", error);
+      console.error("Ağ error:", error);
     }
   };
 
@@ -349,7 +349,6 @@ $(document).ready(function () {
       }
   };
 
-  // API'den ürünleri al
   const getAllProducts = async (params = {}) => {
       const url = "http://localhost:3000/api/products?" + new URLSearchParams(params).toString();
       console.log("API URL: ", url);
